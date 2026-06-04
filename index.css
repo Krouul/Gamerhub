@@ -1,0 +1,291 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Основные стили */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f0f2f5;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  padding-bottom: 100px;
+}
+
+/* Навигация */
+.navbar {
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  color: white;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  z-index: 100;
+}
+
+.nav-links button {
+  background: rgba(255,255,255,0.1);
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.nav-links button:hover {
+  background: #ff7b00;
+}
+
+/* Основной контент */
+.main-content {
+  min-height: calc(100vh - 130px);
+  padding: 30px 20px;
+}
+
+/* Герой-блок */
+.hero {
+  text-align: center;
+  background: linear-gradient(135deg, #ff7b00, #ff4400);
+  color: white;
+  padding: 50px 20px;
+  border-radius: 30px;
+  margin-bottom: 40px;
+}
+
+.hero h1 {
+  color: white;
+  margin-bottom: 15px;
+}
+
+/* Секции */
+.section-title {
+  text-align: center;
+  margin: 40px 0 20px;
+  color: #333;
+}
+
+/* Сетка игр */
+.games-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.game-card {
+  background: white;
+  padding: 30px 20px;
+  border-radius: 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.game-card:hover {
+  transform: translateY(-5px);
+}
+
+.game-icon {
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+.game-link {
+  display: inline-block;
+  margin-top: 15px;
+  color: #ff7b00;
+  font-weight: bold;
+}
+
+/* Сетка разделов внутри игры */
+.game-sections {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  max-width: 900px;
+  margin: 30px auto;
+}
+
+.section-card {
+  background: white;
+  padding: 25px 15px;
+  border-radius: 16px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.section-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.section-icon {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+/* Кнопка назад */
+.back-btn {
+  background: #666;
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.back-btn:hover {
+  background: #888;
+}
+
+/* Контент подразделов */
+.subsection-content {
+  background: white;
+  padding: 25px;
+  border-radius: 20px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Новости */
+.news-list {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.news-item {
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  margin-bottom: 15px;
+  transition: 0.3s;
+}
+
+.news-item:hover {
+  transform: translateX(5px);
+}
+
+.news-date {
+  color: #ff7b00;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Блоки донатов и гайдов */
+.donate-section, .news-section, .guides-section {
+  background: white;
+  padding: 20px;
+  border-radius: 20px;
+  margin: 20px auto;
+  max-width: 700px;
+}
+
+.donate-section h2, .news-section h2, .guides-section h2 {
+  color: #ff7b00;
+  margin-bottom: 15px;
+}
+
+.donate-section ul, .guides-section ul {
+  padding-left: 25px;
+}
+
+.donate-section li, .guides-section li {
+  margin: 10px 0;
+}
+
+.note {
+  background: #fff3cd;
+  padding: 10px;
+  border-radius: 8px;
+  margin-top: 15px;
+  color: #856404;
+}
+
+/* Ссылки */
+.discord-link, .donate-link {
+  display: inline-block;
+  background: #5865f2;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  margin-top: 15px;
+}
+
+/* Шаги для Matcherino */
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.step {
+  background: #f8f9fa;
+  padding: 12px 18px;
+  border-radius: 12px;
+  border-left: 4px solid #ff7b00;
+}
+
+/* Прилипающие кнопки внизу */
+.bottom-buttons {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 15px;
+  background: rgba(30, 30, 46, 0.95);
+  backdrop-filter: blur(10px);
+  z-index: 100;
+}
+
+.support-btn, .home-btn {
+  padding: 10px 25px;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+}
+
+.support-btn {
+  background: #ff7b00;
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.home-btn {
+  background: #666;
+  color: white;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero h1 {
+    font-size: 24px;
+  }
+  .games-grid {
+    grid-template-columns: 1fr;
+  }
+  .game-sections {
+    grid-template-columns: 1fr;
+  }
+}
